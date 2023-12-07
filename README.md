@@ -43,5 +43,6 @@ EMA_t = (1 - alpha) * EMA_(t-1) + alpha * sum(rtv_t)
 
 
 
-![image](https://github.com/emilcube/options-etl-pyspark/assets/24300598/064816f9-d9d8-45e2-888b-bc6817f8b2d6)
+![image](https://github.com/emilcube/options-etl-pyspark/assets/24300598/820d1f13-c419-490b-81b9-a20fb047b545)
+
 
