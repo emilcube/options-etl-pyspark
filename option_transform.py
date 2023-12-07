@@ -101,7 +101,7 @@ def TransformOption(df, df_price):
 def SUM_RTV(df):
   df = df.withColumn("trunc_time", F.date_trunc("hour", "time"))
   df = df.select(F.col("trunc_time"), F.col("rtv")) #.limit(5)
-  df = df.groupBy('trunc_time').sum('rtv').orderBy('trunc_time', ascending=True)
+  df = df.groupBy('trunc_time').sum('rtv') #.orderBy('trunc_time', ascending=True)
   return df
 
 def EMA_CALC(df):
