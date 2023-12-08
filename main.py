@@ -46,7 +46,7 @@ if __name__ == "__main__":
       dfDay = option_transform.unionAlls(frames) # df with all options trade in one specific day
       df_rtv_accum = option_transform.RTV_addition(df_rtv_accum, option_transform.SUM_RTV(dfDay))
       outFile = baseOut + "Deribit_option_trades_" + day_folder_options.rsplit("/", 1)[1] + ".csv" # Y-M-D
-      df.repartition(1).write.csv(outFile) #df.to_csv(outFile)
+      dfDay.repartition(1).write.csv(outFile) #dfDay.to_csv(outFile)
   print(datetime.now(), "day_folder_options_end")
 
   df_rtv_accum = df_rtv_accum.orderBy('trunc_time', ascending=True)
